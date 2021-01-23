@@ -2,6 +2,7 @@ var tableTD = document.querySelector("table tbody");
 var registerInputs = document.getElementById("register");
 
 
+
 /* Kişi Ekleme */
 function addRow() {
     for (var i = 0; i < registerInputs.children.length - 1; i++) {
@@ -17,19 +18,14 @@ function addRow() {
     id.innerText = registerInputs.children[0].value;
     var ad = document.createElement("td");
     ad.innerText = registerInputs.children[1].value;
-
     var soyad = document.createElement("td");
     soyad.innerText = registerInputs.children[2].value;
-
     var sira = document.createElement("td");
     sira.appendChild(document.createElement("input"));
     sira.children[0].setAttribute("disabled", true);
-
-
     var pCheck = document.createElement("td");
     pCheck.appendChild(document.createElement("input"));
     pCheck.children[0].setAttribute("type", "checkbox");
-
     tableTD.appendChild(tr);
     tr.appendChild(id);
     tr.appendChild(ad);
