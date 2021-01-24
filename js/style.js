@@ -1,11 +1,13 @@
 var tableTD = document.querySelector("table tbody");
 var registerInputs = document.getElementById("register");
 var cBox = document.querySelectorAll(".table input[type=checkbox]");
-
+var ekle = document.getElementById("ekle");
+var kaydet = document.getElementById("kaydet");
 
 /* Kişi Ekleme */
-function addRow() {
-    for (var i = 0; i < registerInputs.children.length - 1; i++) {
+
+ekle.addEventListener("click", function() {
+    for (var i = 0; i < registerInputs.children.length - 2; i++) {
         var child = registerInputs.children[i];
         if (child.value === "") {
             alert(child.id + " Boş olamaz");
@@ -35,7 +37,8 @@ function addRow() {
     tr.appendChild(soyad);
     tr.appendChild(sira);
     tr.appendChild(pCheck);
-}
+});
+
 
 /* Checkbutton check kontrolü */
 function checkEvent(pCheck) {
@@ -50,3 +53,9 @@ function checkEvent(pCheck) {
     }
 
 }
+
+
+/* Kaydet ve console'a yazdırma */
+/* function kaydet() {
+
+} */
