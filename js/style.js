@@ -26,10 +26,27 @@ function addRow() {
     var pCheck = document.createElement("td");
     pCheck.appendChild(document.createElement("input"));
     pCheck.children[0].setAttribute("type", "checkbox");
+    pCheck.children[0].addEventListener("change", function() {
+        checkEvent(pCheck);
+    });
     tableTD.appendChild(tr);
     tr.appendChild(id);
     tr.appendChild(ad);
     tr.appendChild(soyad);
     tr.appendChild(sira);
     tr.appendChild(pCheck);
+}
+
+/* Checkbutton check kontrolü */
+function checkEvent(pCheck) {
+    var child = pCheck.parentElement;
+    child = child.children[3].children[0];
+    console.log(child.attributes);
+    if (child.attributes.length == 0) {
+        child.setAttribute("disabled", true);
+        child.value = "";
+    } else {
+        child.removeAttribute("disabled");
+    }
+
 }
