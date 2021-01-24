@@ -1,6 +1,6 @@
 var tableTD = document.querySelector("table tbody");
 var registerInputs = document.getElementById("register");
-
+var cBox = document.querySelectorAll(".table input[type=checkbox]");
 
 
 /* Kişi Ekleme */
