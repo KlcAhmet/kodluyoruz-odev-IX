@@ -1,0 +1,51 @@
+:root {
+    --body-background-color: #eae2b7;
+    --table-background-color: #fcbf49;
+    --table-header-background-color: #f77f00;
+    --register-element-margin: 0 2px;
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+
+.table {
+    background-color: var(--table-background-color);
+    margin-top: 30px;
+    &__header {
+        background-color: var(--table-header-background-color);
+        font-weight: 900;
+    }
+    &__info {
+        font-weight: 500;
+    }
+}
+
+.register {
+    &__input {
+        outline: none;
+        border-radius: 5px;
+        margin: var(--register-element-margin);
+    }
+    &__button {
+        margin: var(--register-element-margin);
+    }
+    .--id {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .table {
+        input {
+            width: 60px;
+        }
+    }
+    .register {
+        display: flex;
+        flex-wrap: wrap !important;
+        .--id {
+            width: auto;
+        }
+    }
+}

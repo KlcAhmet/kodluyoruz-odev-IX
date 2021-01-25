@@ -1,0 +1,55 @@
+:root {
+  --body-background-color: #eae2b7;
+  --table-background-color: #fcbf49;
+  --table-header-background-color: #f77f00;
+  --register-element-margin: 0 2px;
+}
+
+body {
+  background-color: var(--body-background-color);
+}
+
+.table {
+  background-color: var(--table-background-color);
+  margin-top: 30px;
+}
+
+.table__header {
+  background-color: var(--table-header-background-color);
+  font-weight: 900;
+}
+
+.table__info {
+  font-weight: 500;
+}
+
+.register__input {
+  outline: none;
+  border-radius: 5px;
+  margin: var(--register-element-margin);
+}
+
+.register__button {
+  margin: var(--register-element-margin);
+}
+
+.register .--id {
+  width: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .table input {
+    width: 60px;
+  }
+  .register {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+  }
+  .register .--id {
+    width: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
